@@ -1,0 +1,17 @@
+// Say you have an array for which the i th element is the price of a given stock on day i
+
+// Design an algorithm to find the maximum profit. You may complete as many transactions as you like (ie, buy one and sell one share of the stock multiple times)
+// However, you may not engage in multiple transactions at the same time (ie, you must sell the stock before you buy again)
+
+public class BestTimeBuyAndSellStockII {
+	public int maxProfit(int[] prices){
+		int profit = 0;
+		for (int i = 1; i < prices.length; i++){
+			int cur = prices[i] - prices[i-1];
+			if ( cur > 0 ){
+				profit = profit + cur;
+			}
+		}
+		return profit;
+	}
+}
