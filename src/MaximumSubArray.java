@@ -15,6 +15,7 @@ public class MaximumSubArray {
         int[] max = new int[A.length];
         max[0] = A[0];
         int res = max[0];
+        
         for (int i = 1; i < A.length; i++){
             if(A[i]>max[i-1]+A[i]){
                 max[i] = A[i];
