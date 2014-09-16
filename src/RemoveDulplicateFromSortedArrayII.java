@@ -1,3 +1,5 @@
+import java.util.HashMap;
+
 	
 public class RemoveDulplicateFromSortedArrayII {
     public int removeDuplicates(int[] A) {
@@ -18,6 +20,8 @@ public class RemoveDulplicateFromSortedArrayII {
                 j++;
             }
         }
+       
+        HashMap<Integer,Boolean> hm = new HashMap<Integer,Boolean>();
         return j;
     }
 }
